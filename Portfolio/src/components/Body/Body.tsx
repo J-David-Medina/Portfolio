@@ -1,3 +1,7 @@
 export const Body = () => {
-  return <div>Este es el cuerpo</div>;
+  return (
+    <>
+      <div className="border">dsa</div>
+    </>
+  );
 };
