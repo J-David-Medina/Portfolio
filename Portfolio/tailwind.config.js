@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors: {
+        "dark-bg": "#121212",
+      },
       transitionProperty: {
         all: "all",
         colors: "background-color, color, border-color, fill, stroke",

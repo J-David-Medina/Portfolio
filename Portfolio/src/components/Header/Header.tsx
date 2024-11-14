@@ -1,27 +1,32 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import ThemeSwitch, { MenuButton } from "./MenuButton";
 import { Navlinks } from "./Navlinks";
-import { useAppContext } from "../../context/ContextApp";
 
 export const Header = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   return (
     <>
-      <header className=" ">
-        <nav className="flex items-center justify-between p-3 lg:px-8">
-          <div className="flex lg:hidden">
+      <header
+        className="sticky top-0 z-50 bg-white dark:bg-[#121212] shadow-sm  flex items-center "
+        style={{ height: "3rem" }}
+      >
+        <nav className="flex items-center justify-between px-3  w-full">
+          <div className="flex lg:hidden ">
             <MenuButton
               isOpen={mobileMenu}
               onClick={() => setMobileMenu(!mobileMenu)}
             />
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
+
+          <div className="hidden lg:flex lg:gap-x-12 ">
             <Navlinks onClick={() => false} />
           </div>
+
           <ThemeSwitch />
         </nav>
+
         <Dialog
           open={mobileMenu}
           onClose={() => setMobileMenu(false)}

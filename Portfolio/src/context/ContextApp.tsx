@@ -3,6 +3,7 @@ import React, {
   ReactNode,
   useContext,
   useEffect,
+  useMemo,
   useState,
 } from "react";
 
@@ -17,7 +18,7 @@ interface ContextAppValue {
 
 export const GlobalContextApp = createContext<ContextAppValue | null>(null);
 const ContextApp: React.FC<ProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<"light" | "dark">(() => {
+  const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
     return savedTheme
       ? (savedTheme as "light" | "dark")
@@ -34,10 +35,13 @@ const ContextApp: React.FC<ProviderProps> = ({ children }) => {
   const handleChangeTheme = () =>
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
 
-  const value: ContextAppValue = {
-    handleChangeTheme,
-    theme,
-  };
+  const value: ContextAppValue = useMemo(
+    () => ({
+      handleChangeTheme,
+      theme,
+    }),
+    [theme]
+  );
 
   return (
     <GlobalContextApp.Provider value={value}>

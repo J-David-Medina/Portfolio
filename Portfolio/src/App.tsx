@@ -1,17 +1,21 @@
-import { Body } from "./components/Body/Body";
+import Body from "./components/Body/Body";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { ContextApp } from "./context/ContextApp";
 
 function App() {
   return (
-    <ContextApp>
-      <div className="dark:bg-black">
-        <Header />
-        <Body />
-        {/* <Footer />  */}
+    <div className="dark:bg-[#121212]">
+      <div className=" lg:w-[70%] mx-auto ">
+        <ContextApp>
+          <Header />
+
+          <Body />
+
+          <Footer />
+        </ContextApp>
       </div>
-    </ContextApp>
+    </div>
   );
 }
 

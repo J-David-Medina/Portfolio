@@ -8,6 +8,10 @@ body {
   @apply transition-all duration-500 ease-in-out;
 }
 
+body.dark {
+  @apply bg-[#121212];
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

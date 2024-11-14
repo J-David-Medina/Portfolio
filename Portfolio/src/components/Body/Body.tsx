@@ -1,7 +1,13 @@
-export const Body = () => {
+import { Home } from "./home/home";
+import Skills from "./skills/skills";
+
+const Body = () => {
   return (
     <>
-      <div className="border">dsa</div>
+      <Home />
+      <Skills />
     </>
   );
 };
+
+export default Body;
