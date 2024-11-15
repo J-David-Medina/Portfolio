@@ -12,7 +12,7 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ isOpen, onClick }) => (
   <button
     type="button"
     onClick={onClick}
-    className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+    className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-title"
   >
     {isOpen ? (
       <FontAwesomeIcon icon={faXmark} />

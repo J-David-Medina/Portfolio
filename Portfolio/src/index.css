@@ -2,15 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 * {
-  @apply transition-all duration-500 ease-in-out;
+  @apply transition-background duration-500 ease-in-out;
 }
+
 body {
-  @apply transition-all duration-500 ease-in-out;
+  @apply transition-background duration-500 ease-in-out;
 }
 
 body.dark {
-  @apply bg-[#121212];
+  @apply bg-dark-bg; 
 }
+
 
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

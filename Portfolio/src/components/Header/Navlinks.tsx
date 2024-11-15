@@ -15,7 +15,7 @@ export const Navlinks: React.FC<NavlinksProps> = ({ onClick }) => {
           key={item.name}
           href={item.href}
           onClick={onClick}
-          className="text-sm font-semibold text-gray-900 dark:text-[#BB86FC] hover:bg-blue-500 dark:hover:bg-blue-700 hover:text-white dark:hover:text-gray-100 rounded-lg transition-colors duration-300"
+          className="text-sm font-semibold  text-title blue-700 rounded-lg transition-colors duration-300"
         >
           {item.name}
         </a>
