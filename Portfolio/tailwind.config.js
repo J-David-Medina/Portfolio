@@ -5,10 +5,10 @@ export default {
     extend: {
       colors: {
         "dark-bg": "#121212",
+        title: "#2fb371",
       },
       transitionProperty: {
-        all: "all",
-        colors: "background-color, color, border-color, fill, stroke",
+        background: "background-color",
       },
       transitionDuration: {
         500: "500ms",

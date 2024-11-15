@@ -5,11 +5,11 @@ export const Home = () => {
   return (
     <div
       id="home"
-      className="flex sm:flex-row flex-col space-x-4 sm:space-x-8 space-y-8 dark:bg-[#121212] items-center justify-center "
+      className="flex sm:flex-row flex-col space-x-4 sm:space-x-8 space-y-8  items-center justify-center "
       style={{ height: "calc(100vh - 3rem)" }}
     >
       <div className=" space-y-8 ">
-        <h2 className="dark:text-[#BB86FC] text-black text-4xl font-bold ">
+        <h2 className="text-title  text-4xl font-bold ">
           Bienvenidos a mi sitio web
         </h2>
         <p className="dark:text-[#E0E0E0] text-black text-left  max-w-3xl text-lg">
